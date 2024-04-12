@@ -19,28 +19,52 @@
         color: white;
         font-family: "Poppins", sans-serif;
       }
-      nav {
+      .navbar {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        display: flex;
+        /* justify-content: space-around; */
+        align-items: center;
+        width: 100%;
         height: 70px;
         background-color: rgb(22, 21, 21);
       }
-      nav ul {
+
+      /* Add this CSS to style the menu items */
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
         display: flex;
-        justify-content: center;
       }
-      nav ul li {
+
+      .navbar ul li {
         list-style: none;
-        margin: 0px 23px;
+        margin: 0px 15px 0px 23px;
       }
-      nav ul li a {
+
+      .navbar ul li a {
         text-decoration: none;
         color: white;
       }
-      nav ul li a:hover {
+
+      .navbar ul li a:hover {
         color: rgba(252, 250, 250, 0.61);
       }
+
+      .left {
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        padding-left: 4vw;
+        align-items: center;
+      }
+      .right {
+        padding-right: 2vw;
+      }
+
       .footer {
         margin-top: 20px;
         height: 120px;
@@ -61,76 +85,312 @@
         display: flex;
         justify-content: center;
         margin: 50px 0 0 0;
+        height: 160px;
       }
+      .firstsection h1{
+        font-size: 3rem;
+      }
+      .leftsection_head {
+        margin: 30px 0;
+        width: 50%;
+      }
+      .rightsection_head {
+        margin: 30px 0;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .rightsection_head a{
+        font-size: large;
+        color: white;
+      }
+
+      .rightsection_head a:hover {
+        color: rgba(252, 250, 250, 0.61);
+      }
+      .leftsection {
+        margin: 30px 0;
+        width: 40%;
+        display: flex;
+        justify-content: center; 
+        flex-direction: column;
+       }
+      .rightsection {
+        margin: 30px 0;
+        width: 40%;
+      }
+      .sidebar{
+        display: none;
+      }
+
+      .menu-icon {
+        display: none;
+        cursor: pointer;
+      }
+
+        .footer {
+        margin-top: 20px;
+        height: 120px;
+        background-color: rgb(22, 21, 21);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      
       .secondsection {
         display: flex;
         justify-content: center;
         margin: 50px 0;
       }
 
-      .leftsection {
-        margin: 30px 0;
-        width: 40%;
-                
-      }
-      .rightsection {
-        margin: 30px 0;
-        width: 40%;
-      }
+      
       main hr {
         border: 0;
         background: white;
         height: 1.2px;
         margin: 0px 154px ;
       }
+
+      #left_section1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #right_section2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #left_section3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media only screen and (max-width: 965px) {
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          display: flex;
+          /* justify-content: space-around; */
+          align-items: center;
+          height: 70px;
+          width: 100%;
+          background-color: rgb(22, 21, 21);
+        }
+
+        .navbar ul {
+          flex-direction: column;
+        }
+
+        .navbar ul li {
+          margin: 10px 0;
+        }
+
+        .menu-icon {
+          display: block;
+          margin-right: 5vw;
+        }
+
+        .right {
+          display: none;
+        }
+
+        .left {
+          font-size: 1.5rem;
+          font-weight: 500;
+          display: flex;
+          justify-content: center;
+          padding-left: 7vw;
+          align-items: center;
+        }
+
+        .firstsection {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 60px 0 0 0;
+          height: 100px;
+        }
+        .firstsection h1{
+        font-size: 2rem;
+        display: flex;
+      }
+
+      .firstsection span{
+        font-size: 11px;
+      }
+      .hrr{
+        margin: 20px 15vw 0 15vw;
+      }
+
+        .leftsection_head {
+          width: 60%;
+          margin-bottom: 0px;
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .rightsection_head{
+          width: 40%;
+          margin-bottom: 30px;
+        }
+
+        .rightsection_head a{
+        font-size: medium;
+        color: white;
+      }
+
+        .leftsection{
+          width: 80%;
+          margin-bottom: 0px;
+          margin-top: 10px;
+        }
+        .rightsection {
+          width: 80%;
+        }
+        .secondsection .txt{
+          margin-left: 7vw;
+        }
+
+        .white {
+          font-size: 2rem;
+          color: white;
+          font-weight: 500;
+        }
+        .whitish {
+          font-size: 2rem;
+          color: rgba(252, 250, 250, 0.61);
+        }
+        
+
+      .sidebar{
+        position: fixed;
+        top:0px;
+        right: 0px;
+        height: 100vh;
+        width: 300px;
+        color: black;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.692);
+        box-shadow: 10px 0px 10px rgb(121, 118, 118);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        backdrop-filter: blur(7px);
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .sidebar ul li {
+        font-weight: 500;
+        list-style: none;
+        margin: 25px 0px 30px 30px;
+      }
+
+      .sidebar ul li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .sidebar ul li a:hover {
+        color: rgba(252, 250, 250, 0.61);
+      }
+      .sidebar .left{
+        font-weight: 500;
+        margin: 0px;
+        margin: 20px 0px 0px 0px;
+        padding-left: 3vw;
+      }
+      .sidebar .menu-icon{
+        margin: 20px 0px 0px 126px;
+        padding: 0px;
+      }
+      #left_section1{
+        display: none;
+      }
+      #right_section2{
+        display: none;
+      }
+      #left_section3{
+        display: none;
+      }
+
+
+    
+      
+      }
+      
     
     </style>
   </head>
   <body>
     <header>
-      <nav style="background-image: url(background.jpg);">
+      <nav class="navbar" style="background-image: url(background.jpg)">
         <div class="left">Yash's Portfolio</div>
         <div class="right">
-          <ul>
+          <ul class="menu-items">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact Me</a></li>
           </ul>
         </div>
-      </nav>
+        <div class="menu-icon" onclick="displaySidebar()">&#9776;</div>
+        </nav>
+          <div class="right sidebar">
+            <div style="display: flex; justify-content: space-around; align-items: center;">
+              <div class="left">Contents</div>
+              <div class=" menu-icon" onclick="hideSidebar()">&#10006;</div>
+            </div>
+            
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+          </div>
     </header>
 
 
     <main>
-        <section class="firstsection" style="height: 160px;" >
-            <div class="leftsection" style="width: 50%;">
+        <section class="firstsection">
+            <div class="leftsection_head">
                 <span style="color: rgba(173, 163, 163, 0.658)"
           >insights of some projects that i built</span
         >
-                <h1 style=" font-size: 3rem;">My projects</h1>
-                <p style="font-size: 15px; padding-top: 25px;">
-                   
-    
-    
-                </p>
+                <h1>My projects</h1>
+                
             </div>
-            <div class="rightsection" style="width: 20%;"></div>
+            <div class="rightsection_head" >
+            <a href="https://drive.google.com/drive/folders/1Tsx5VZhYR_zQT_Wgm4dTdbUeJSwIuC1Q?usp=drive_link" target="_blank">Certifications</a></div>
           
 
 
         </section>
-        <hr />
+        <hr class="hrr"/>
 
         <section class="secondsection" style="margin-top: 0px;">
-            <div class="leftsection " style="display: flex; justify-content: center; align-items: center;" >
-                <div style="height: 250px; background-color: white; border-radius: 50%; width: 250px;display: flex; justify-content: center; align-items: center; ">
+            <div class="leftsection " id="left_section1">
+                <div class = "imag" style="height: 250px; background-color: white; border-radius: 50%; width: 250px;display: flex; justify-content: center; align-items: center; ">
                     <img src="reactlogo.webp" alt="" height="200px" width="200px" >
                 </div>
                 
             </div>
             
-            <div class="rightsection" >
+            <div class="rightsection txt" id="right_section1">
                 <p style="font-size: 15px;">
                     <span style="color: rgba(173, 163, 163, 0.658); font-size: 10px;"
           >projects created in React js</span>
@@ -148,8 +408,8 @@
             
         </section>
 
-        <section class="secondsection">
-            <div class="leftsection " >
+        <section class="secondsection " >
+            <div class="leftsection txt" id="left_section2">
                 <p style="font-size: 15px;">
                     
                     <span style="color: rgba(173, 163, 163, 0.658); font-size: 10px;"
@@ -157,7 +417,7 @@
                     <h2>JavaScript </h2>
                     <ul>
                         <li>
-                            Engaged in the Smart India Hackathon, I played a key role in developing a fully functional frontend and backend website focused on mental health assessment for school and college students, addresses anxiety, depression, social media addiction, and ADHD levels. It also includes features like connecting with counselors for guidance. Our project, ranked 7th out of 70 at the university level,
+                            Engaged in the Smart India Hackathon, I played a key role in developing a fully functional frontend and backend website focused on mental health assessment for school and college students, addresses anxiety, depression, social media addiction, and ADHD levels. It also includes features like connecting with counselors for guidance. Our project, ranked 7th out of 70 at the university level.
                         </li>
                         <br>
                         <li>
@@ -172,9 +432,9 @@
                 
             </div>
             
-            <div class="rightsection" style="display: flex; justify-content: center; align-items: center;">
+            <div class="rightsection" id="right_section2" >
 
-                <div style="height: 250px; background-color: white; border-radius: 50%; width: 250px;display: flex; justify-content: center; align-items: center;">
+                <div class = "imag" style="height: 250px; background-color: white; border-radius: 50%; width: 250px;display: flex; justify-content: center; align-items: center;">
                     <img src="javascriptlogo1.png" alt="" height="168px" width="167px" style="position: relative; top: 10px;">
                 </div>
 
@@ -187,14 +447,14 @@
         
 
         <section class="secondsection">
-            <div class="leftsection " style="display: flex; justify-content: center; align-items: center;" >
-                <div style="height: 250px; background-color: white; border-radius: 50%; width: 250px;display: flex; justify-content: center; align-items: center; ">
+            <div class="leftsection " id="left_section3"  >
+                <div class = "imag" style="height: 250px; background-color: white; border-radius: 50%; width: 250px;display: flex; justify-content: center; align-items: center; ">
                     <img src="htmllogo.jpg" alt="" height="200px" width="200px">
                 </div>
                 
             </div>
             
-            <div class="rightsection" >
+            <div class="rightsection txt" id="right_section3">
                 <p style="font-size: 15px;">
 
                     <span style="color: rgba(173, 163, 163, 0.658); font-size: 10px;"
@@ -225,15 +485,17 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <script>
-      var typed = new Typed("#element", {
-        strings: [
-          "Problem Solver",
-          "Coder",
-          "Graphic Designer",
-          "Web Developer",
-        ],
-        typeSpeed: 50,
-      });
+      function displaySidebar() {
+        console.log("sidebar displayed");
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSidebar() {
+        console.log("sidebar displayed");
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+
     </script>
   </body>
 </html>
