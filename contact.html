@@ -31,28 +31,52 @@
         color: white;
         font-family: "Poppins", sans-serif;
       }
-      nav {
+      .navbar {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        display: flex;
+        /* justify-content: space-around; */
+        align-items: center;
+        width: 100%;
         height: 70px;
         background-color: rgb(22, 21, 21);
       }
-      nav ul {
+
+      /* Add this CSS to style the menu items */
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
         display: flex;
-        justify-content: center;
       }
-      nav ul li {
+
+      .navbar ul li {
         list-style: none;
-        margin: 0px 23px;
+        margin: 0px 15px 0px 23px;
       }
-      nav ul li a {
+
+      .navbar ul li a {
         text-decoration: none;
         color: white;
       }
-      nav ul li a:hover {
+
+      .navbar ul li a:hover {
         color: rgba(252, 250, 250, 0.61);
       }
+
+      .left {
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        padding-left: 4vw;
+        align-items: center;
+      }
+      .right {
+        padding-right: 2vw;
+      }
+
       .footer {
         margin-top: 20px;
         height: 120px;
@@ -69,16 +93,81 @@
       .right {
         margin-left: 370px;
       }
+      
       .firstsection {
         display: flex;
         justify-content: center;
         margin: 50px 0 0 0;
+        height: 160px;
       }
+      .firstsection h1{
+        font-size: 3rem;
+      }
+      .leftsection_head {
+        margin: 30px 0;
+        width: 40%;
+      }
+      .rightsection_head {
+        margin: 30px 0;
+        width: 40%;
+      }
+
+      .leftsection {
+        margin: 30px 0;
+        width: 40%;
+        display: flex;
+        justify-content: center; 
+        flex-direction: column;
+       }
+      .rightsection {
+        margin: 30px 0;
+        width: 40%;
+      }
+      .sidebar{
+        display: none;
+      }
+
+      .menu-icon {
+        display: none;
+        cursor: pointer;
+      }
+
+        .footer {
+        margin-top: 20px;
+        height: 120px;
+        background-color: rgb(22, 21, 21);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      
       .secondsection {
         display: flex;
         justify-content: center;
         margin: 50px 0;
       }
+
+      
+      main hr {
+        border: 0;
+        background: white;
+        height: 1.2px;
+        margin: 0px 154px ;
+      }
+      .footer {
+        margin-top: 20px;
+        height: 120px;
+        background-color: rgb(22, 21, 21);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      
+      
 
       .leftsection {
         margin: 30px 0;
@@ -95,24 +184,7 @@
         height: 1.2px;
         margin: 0px 154px ;
       }
-      .resume {
-        margin: 35px 62px 0 0;
-        padding: 13px;
-        border-radius: 7px;
-        background-color: rgb(22, 21, 21);
-        color: white;
-        font-size: 15px;
-        font-weight: 500;
-        border: 1px solid white;
-        font-family: "Poppins", sans-serif;
-        cursor: pointer;
-        transition-duration: 0.3s;
-        width: 100px;
-      }
-      .resume:hover {
-        background-color: rgb(53, 49, 49);
-      }
-
+      
 
       form{
         display: flex;
@@ -192,43 +264,249 @@
         color: white;
         text-decoration: none;
       }
+      
+      .resume {
+        padding: 13px;
+        border-radius: 7px;
+        background-color: rgb(22, 21, 21);
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        border: 1px solid white;
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        margin: 50px 60px 0px 0px;
+      }
+      .resume:hover {
+        background-color: rgb(53, 49, 49);
+      }
+
+      @media only screen and (max-width: 965px) {
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          display: flex;
+          /* justify-content: space-around; */
+          align-items: center;
+          height: 70px;
+          width: 100%;
+          background-color: rgb(22, 21, 21);
+        }
+
+        .navbar ul {
+          flex-direction: column;
+        }
+
+        .navbar ul li {
+          margin: 10px 0;
+        }
+
+        .menu-icon {
+          display: block;
+          margin-right: 5vw;
+        }
+
+        .right {
+          display: none;
+        }
+
+        .left {
+          font-size: 1.5rem;
+          font-weight: 500;
+          display: flex;
+          justify-content: center;
+          padding-left: 7vw;
+          align-items: center;
+        }
+
+        .firstsection {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 60px 0 0 70px;
+          height: 100px;
+        }
+        .firstsection .leftsection h1{
+        font-size: 2rem;
+        display: flex;
+      }
+
+      .firstsection .leftsection span{
+        font-size: small;
+      }
+      .hrr{
+        margin: 0 15vw 0 15vw;
+      }
+
+        .leftsection_head {
+          width: 80%;
+          margin-bottom: 0px;
+          margin-top: 10px;
+        }
+        .rightsection_head {
+          width: 80%;
+        }
+
+        .leftsection{
+          width: 80%;
+          margin-bottom: 0px;
+          margin-top: 10px;
+        }
+        .rightsection {
+          width: 80%;
+        }
+        .secondsection {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .secondsection .rightsection .social_head{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        }
+
+        .secondsection .rightsection .notcent{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-left: -6vw;
+        }
+        .secondsection .rightsection .cent{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+
+        .white {
+          font-size: 2rem;
+          color: white;
+          font-weight: 500;
+        }
+        .whitish {
+          font-size: 2rem;
+          color: rgba(252, 250, 250, 0.61);
+        }
+        
+
+      .sidebar{
+        position: fixed;
+        top:0px;
+        right: 0px;
+        height: 100vh;
+        width: 300px;
+        color: black;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.692);
+        box-shadow: 10px 0px 10px rgb(121, 118, 118);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        backdrop-filter: blur(7px);
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .sidebar ul li {
+        font-weight: 500;
+        list-style: none;
+        margin: 25px 0px 30px 30px;
+      }
+
+      .sidebar ul li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .sidebar ul li a:hover {
+        color: rgba(252, 250, 250, 0.61);
+      }
+      .sidebar .left{
+        font-weight: 500;
+        margin: 0px;
+        margin: 20px 0px 0px 0px;
+        padding-left: 3vw;
+      }
+      .sidebar .menu-icon{
+        margin: 20px 0px 0px 126px;
+        padding: 0px;
+      }
+      .form-element{
+        margin: 35px 0px 0 0 ;
+        max-width: 100%;
+      }
+      .temp{
+        margin-left: 10vw;
+      }
+      .resume {
+        
+        margin: 50px 0px;
+      }
+      }
+      
     </style>
   </head>
   <body>
     <header>
-      <nav style="background-image: url(background.jpg);">
+      <nav class="navbar" style="background-image: url(background.jpg)">
         <div class="left">Yash's Portfolio</div>
         <div class="right">
-          <ul>
+          <ul class="menu-items">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact Me</a></li>
           </ul>
         </div>
-      </nav>
+        <div class="menu-icon" onclick="displaySidebar()">&#9776;</div>
+        </nav>
+          <div class="right sidebar">
+            <div style="display: flex; justify-content: space-around; align-items: center;">
+              <div class="left">Contents</div>
+              <div class=" menu-icon" onclick="hideSidebar()">&#10006;</div>
+            </div>
+            
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+          </div>
     </header>
 
 
     <main>
-        <section class="firstsection" style="height: 160px;" >
-            <div class="leftsection" >
+        <section class="firstsection" >
+            <div class="leftsection leftsection_head" >
                 <span style="color: rgba(173, 163, 163, 0.658)"
           >Let's get in touch</span
         >
-                <h1 style=" font-size: 3rem;">Contact Me</h1>
-                <p style="font-size: 15px;">
-                   
-    
-    
-                </p>
+                <h1>Contact Me</h1>
             </div>
-            <div class="rightsection" style="width: 20%;"></div>
+            <div class="rightsection rightsection_head" style="width: 20%;"></div>
           
 
 
         </section>
-        <hr />
+        
+        <hr class="hrr" />
 
         <section class="secondsection" style="margin-top: 0px;">
             <div class="leftsection " style="display: flex; justify-content: center; " >
@@ -244,11 +522,17 @@
             </div>
             
             <div class="rightsection"  >
-                <p style="font-size: 15px;">
+              <div class="social_head" style="width: 100%;">
+                <div class="notcent">
+                  <p style="font-size: 15px;">
                     <span style="color: rgba(173, 163, 163, 0.658); font-size: 10px;"
-          >reach me out through social media</span>
+                    >reach me out through social media</span>
                     <h2>Social media handles</h2></p>
-                    <div style="display: flex;">
+                </div>
+              </div>
+              
+                    <div class="cent">
+                      <div class="temp" style="display: flex;">
                         <div class="left-parts" style="display: flex; flex-direction: column;">
                             <div class="lpart">
                             <div class="lpartu" style="height: 60px;"></div>
@@ -304,6 +588,9 @@
                             
                         </div>
                     </div>
+
+                    </div>
+                    
                     
             </div>
                     
@@ -329,6 +616,17 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <script>
+
+        function displaySidebar() {
+        console.log("sidebar displayed");
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSidebar() {
+        console.log("sidebar displayed");
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
         function sendEmail(){
             var params = {
                 from_name : document.getElementById("name").value,
