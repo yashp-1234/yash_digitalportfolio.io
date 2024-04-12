@@ -20,7 +20,7 @@
         color: white;
         font-family: "Poppins", sans-serif;
       }
-      nav {
+      /* nav {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -41,7 +41,54 @@
       }
       nav ul li a:hover {
         color: rgba(252, 250, 250, 0.61);
+      } */
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        /* justify-content: space-around; */
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        background-color: rgb(22, 21, 21);
       }
+
+      /* Add this CSS to style the menu items */
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .navbar ul li {
+        list-style: none;
+        margin: 0px 15px 0px 23px;
+      }
+
+      .navbar ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .navbar ul li a:hover {
+        color: rgba(252, 250, 250, 0.61);
+      }
+
+      .left {
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        padding-left: 4vw;
+        align-items: center;
+      }
+      .right {
+        padding-right: 2vw;
+      }
+
       .footer {
         margin-top: 20px;
         height: 120px;
@@ -73,23 +120,198 @@
         margin: 30px 0;
         width: 40%;
       }
+      .sidebar{
+        display: none;
+      }
+
+      .menu-icon {
+        display: none;
+        cursor: pointer;
+      }
+
+      .right-img{
+          background-image: url("background1.jpg");
+          background-repeat: no-repeat;
+          height: 400px;
+          width: 400px;
+          border-color: rgba(252, 250, 250, 0.61);
+          border-radius: 50%;
+          border: 2px solid white;
+          margin-left: 50px;
+        }
+      
+        .left-img{
+          background-image: url("background2.jpg");
+          background-repeat: no-repeat;
+          height: 400px;
+          width: 400px;
+          background-position: center;
+          border-color: rgba(252, 250, 250, 0.61);
+          border-radius: 50%;
+          border: 2px solid white;
+          margin-right: 80px;
+        }
+
+      
+
+      @media only screen and (max-width: 965px) {
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          display: flex;
+          /* justify-content: space-around; */
+          align-items: center;
+          height: 70px;
+          width: 100%;
+          background-color: rgb(22, 21, 21);
+        }
+
+        .navbar ul {
+          flex-direction: column;
+        }
+
+        .navbar ul li {
+          margin: 10px 0;
+        }
+
+        .menu-icon {
+          display: block;
+          margin-right: 5vw;
+        }
+
+        .right {
+          display: none;
+        }
+
+        .left {
+          font-size: 1.5rem;
+          font-weight: 500;
+          display: flex;
+          justify-content: center;
+          padding-left: 7vw;
+          align-items: center;
+        }
+
+        .firstsection {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 10px 0;
+        }
+
+        .leftsection {
+          width: 80%;
+        }
+        .rightsection {
+          width: 80%;
+        }
+        .white {
+          font-size: 2rem;
+          color: white;
+          font-weight: 500;
+        }
+        .whitish {
+          font-size: 2rem;
+          color: rgba(252, 250, 250, 0.61);
+        }
+        .right-img{
+          display: none;
+        }
+
+        .left-img{
+          background-image: url("background2.jpg");
+          background-repeat: no-repeat;
+          height: 400px;
+          width: 400px;
+          background-position: center;
+          border-color: rgba(252, 250, 250, 0.61);
+          border-radius: 50%;
+          border: 2px solid white;
+          margin: 0px 0px 0px 0px ; 
+        }
+       
+
+      .sidebar{
+        position: fixed;
+        top:0px;
+        right: 0px;
+        height: 100vh;
+        width: 300px;
+        color: black;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.692);
+        box-shadow: 10px 0px 10px rgb(121, 118, 118);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        backdrop-filter: blur(7px);
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .sidebar ul li {
+        font-weight: 500;
+        list-style: none;
+        margin: 25px 0px 30px 30px;
+      }
+
+      .sidebar ul li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .sidebar ul li a:hover {
+        color: rgba(252, 250, 250, 0.61);
+      }
+      .sidebar .left{
+        font-weight: 500;
+        margin: 0px;
+        margin: 20px 0px 0px 0px;
+        padding-left: 3vw;
+      }
+      .sidebar .menu-icon{
+        margin: 20px 0px 0px 126px;
+        padding: 0px;
+      }
+      }
 
     
     </style>
   </head>
   <body>
     <header>
-      <nav style="background-image: url(background.jpg); ">
+      <nav class="navbar" style="background-image: url(background.jpg)">
         <div class="left">Yash's Portfolio</div>
         <div class="right">
-          <ul>
+          <ul class="menu-items">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact Me</a></li>
           </ul>
         </div>
-      </nav>
+        <div class="menu-icon" onclick="displaySidebar()">&#9776;</div>
+        </nav>
+          <div class="right sidebar">
+            <div style="display: flex; justify-content: space-around; align-items: center;">
+              <div class="left">Contents</div>
+              <div class=" menu-icon" onclick="hideSidebar()">&#10006;</div>
+            </div>
+            
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+          </div>
     </header>
 
 
@@ -109,13 +331,13 @@
                 </p>
             </div>
             
-            <div class="rightsection" >
+            <div class="rightsection right-img" style="margin-top: 100px;">
             </div>
 
 
         </section>
         <section class="firstsection">
-            <div class="leftsection"  >
+            <div class="leftsection left-img"  >
                 
             </div>
             
@@ -137,7 +359,7 @@
                 <p style="font-size: 16px;">
                     My diverse skill set, coupled with an unwavering commitment to excellence, positions me as a dedicated professional ready to make significant contributions to the ever-evolving field of web development. I approach each endeavor with a first-person perspective, combining academic knowledge and practical experience to contribute meaningfully to innovative projects while fostering continuous personal and professional growth within the technology sector.
                 </p>
-            </div>
+            </div>  
             
             <div class="rightsection" >
             </div>
@@ -162,15 +384,17 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <script>
-      var typed = new Typed("#element", {
-        strings: [
-          "Problem Solver",
-          "Coder",
-          "Graphic Designer",
-          "Web Developer",
-        ],
-        typeSpeed: 50,
-      });
+      function displaySidebar() {
+        console.log("sidebar displayed");
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSidebar() {
+        console.log("sidebar displayed");
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+
     </script>
   </body>
 </html>
