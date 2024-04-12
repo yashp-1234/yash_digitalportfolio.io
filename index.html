@@ -20,7 +20,7 @@
         color: white;
         font-family: "Poppins", sans-serif;
       }
-      nav {
+      /* nav {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -41,14 +41,67 @@
       }
       nav ul li a:hover {
         color: rgba(252, 250, 250, 0.61);
+      } */
+
+      /* Navbar */
+
+      .menu-icon {
+        display: none;
+        cursor: pointer;
       }
+
+      /* Add this CSS to align menu items properly */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        /* justify-content: space-around; */
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        background-color: rgb(22, 21, 21);
+      }
+
+      /* Add this CSS to style the menu items */
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .navbar ul li {
+        list-style: none;
+        margin: 0px 15px 0px 23px;
+      }
+
+      .navbar ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .navbar ul li a:hover {
+        color: rgba(252, 250, 250, 0.61);
+      }
+
       .left {
         font-size: 1.5rem;
         font-weight: 500;
+        display: flex;
+        justify-content: center;
+        padding-left: 4vw;
+        align-items: center;
       }
       .right {
-        margin-left: 370px;
+        padding-right: 2vw;
       }
+
+      .inside-hr{
+        margin: 2vh 6% 0vh 6%;
+        height: 2px"
+      }
+
       .firstsection {
         display: flex;
         justify-content: center;
@@ -57,12 +110,14 @@
 
       .leftsection {
         font-size: 3rem;
-        margin: 70px 0;
+        padding: 50px 70px 70px 70px;
       }
+
       .rightsection {
         margin-left: 15px;
         background-image: url("photo1.png");
-        opacity: 0.9;
+        background-repeat: no-repeat;
+        background-position: center;
         background-size: contain;
         height: 450px;
         width: 380px;
@@ -74,10 +129,6 @@
         border-right: 3px solid;
       }
 
-      /* .rightsection img {
-        width: 80%;
-        margin: 50px 0;
-      } */
       .whitish {
         color: rgba(252, 250, 250, 0.61);
       }
@@ -85,6 +136,8 @@
         color: white;
         font-weight: 500;
       }
+
+      
       main hr {
         border: 0;
         background: white;
@@ -92,23 +145,13 @@
         margin: 50px 84px;
       }
       .secondsection {
-        max-width: 80vw;
-        margin: auto;
         height: 80vh;
       }
-      .secondsection .box {
-        background-color: white;
-        height: 2px;
-        width: 80vw;
-        margin: 56px 0;
-        display: flex;
-      }
 
-      .secondsection .vertical {
-        height: 93px;
-        width: 1px;
-        background-color: white;
-        margin: 0 110px;
+      .logos {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
       }
 
       .logo {
@@ -118,10 +161,18 @@
         background-color: white;
         height: 35px;
         width: 32px;
-        position: relative;
-        top: -40px;
-        left: -15px;
         border-radius: 50%;
+      }
+
+      .branch-box {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .branch {
+        height: 100px;
+        width: 1.5px;
+        background-color: white;
       }
 
       .image-top {
@@ -130,21 +181,28 @@
         width: 27px;
       }
 
+      
+        .vertical {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5px;
+
+      }
+
       .vertical-title {
-        position: relative;
-        top: 75px;
-        width: 150px;
+        font-size: 20px;
+        width: 170px;
+        text-align: center;
       }
 
       .vertical-desc {
-        position: relative;
-        top: 86px;
-        color: rgba(173, 163, 163, 0.658);
-        width: 150px;
-        font-size: 9px;
+       color: rgba(173, 163, 163, 0.658);
+        width: 170px;
+        font-size: 10px;
+        text-align:justify;
       }
+
       .footer {
-        margin-top: 40px;
         height: 120px;
         background-color: rgb(22, 21, 21);
         display: flex;
@@ -153,8 +211,6 @@
         align-items: center;
       }
       .resume {
-        position: relative;
-        top: 250px;
         padding: 13px;
         border-radius: 7px;
         background-color: rgb(22, 21, 21);
@@ -165,119 +221,366 @@
         font-family: "Poppins", sans-serif;
         cursor: pointer;
         transition-duration: 0.3s;
-        position: relative;
-        top: 270px;
+        margin: 50px 0px ;
       }
       .resume:hover {
         background-color: rgb(53, 49, 49);
+      }
+
+      .sidebar{
+        display: none;
+      }
+
+      /* Media query for mobile devices */
+      @media only screen and (max-width: 965px) {
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          display: flex;
+          /* justify-content: space-around; */
+          align-items: center;
+          height: 70px;
+          width: 100%;
+          background-color: rgb(22, 21, 21);
+        }
+
+        .navbar ul {
+          flex-direction: column;
+        }
+
+        .navbar ul li {
+          margin: 10px 0;
+        }
+
+        .menu-icon {
+          display: block;
+          margin-right: 5vw;
+        }
+
+        .right {
+          display: none;
+        }
+
+        .left {
+          font-size: 1.5rem;
+          font-weight: 500;
+          display: flex;
+          justify-content: center;
+          padding-left: 5vw;
+          align-items: center;
+        }
+
+        .firstsection {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 50px 0;
+        }
+
+        .leftsection {
+          font-size: 3rem;
+          display: flex;
+          justify-content: center;
+          text-align: left;
+        }
+        .white {
+          font-size: 2rem;
+          color: white;
+          font-weight: 500;
+        }
+        .whitish {
+          font-size: 2rem;
+          color: rgba(252, 250, 250, 0.61);
+        }
+        .rightsection {
+          background-image: url("photo1.png");
+          background-repeat: no-repeat;
+          height: 450px;
+          border-color: rgba(252, 250, 250, 0.61);
+          border-bottom-right-radius: 50%;
+          border-top-right-radius: 50%;
+          border-bottom-left-radius: 250px 5px;
+          border-bottom: 3px solid;
+          border-right: 3px solid;
+        }
+
+        .logos {
+        margin-top: 0px;
+        margin-left: 5%;
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+        
+      .inside-hr{
+        border: 0;
+        background-color: white;
+        height: 930px;
+        width: 2px;
+        margin: 35px 0px 0px 20px;
+      }
+
+      .history{
+        display: flex;
+        margin-top: 30px;
+      }
+
+      .branch-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 1000px;
+      }
+
+      .branch {
+        width: 100px;
+        height: 1.5px;
+        background-color: white;
+      }
+
+      .vertical {
+        display: flex;
+        justify-content: space-around;
+        margin-left: 30px;
+        flex-direction: column;
+        margin-top: 0px;
+        height: 1000px;
+      }
+
+      .vertical-title {
+        font-size: 20px;
+        width: 40vw;
+        text-align: center;
+      }
+
+      .vertical-desc {
+       color: rgba(173, 163, 163, 0.658);
+        width: 40vw;
+        font-size: 10px;
+        text-align:justify;
+      }
+
+      .resume {
+        padding: 13px;
+        border-radius: 7px;
+        background-color: rgb(22, 21, 21);
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        border: 1px solid white;
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        margin: 20px 0px 50px 0px ;
+      }
+
+      .sidebar{
+        position: fixed;
+        top:0px;
+        right: 0px;
+        height: 100vh;
+        width: 300px;
+        color: black;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.692);
+        box-shadow: 10px 0px 10px rgb(121, 118, 118);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        backdrop-filter: blur(7px);
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .sidebar ul li {
+        font-weight: 500;
+        list-style: none;
+        margin: 25px 0px 30px 30px;
+      }
+
+      .sidebar ul li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .sidebar ul li a:hover {
+        color: rgba(252, 250, 250, 0.61);
+      }
+      .sidebar .left{
+        font-weight: 500;
+        margin: 0px;
+        margin: 20px 0px 0px 0px;
+        padding-left: 3vw;
+      }
+      .sidebar .menu-icon{
+        margin: 20px 0px 0px 126px;
+        padding: 0px;
+      }
       }
     </style>
   </head>
   <body>
     <header>
-      <nav style="background-image: url(background.jpg)">
+      <nav class="navbar" style="background-image: url(background.jpg)">
         <div class="left">Yash's Portfolio</div>
         <div class="right">
-          <ul>
+          <ul class="menu-items">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact Me</a></li>
           </ul>
         </div>
-      </nav>
+        <div class="menu-icon" onclick="displaySidebar()">&#9776;</div>
+        </nav>
+          <div class="right sidebar">
+            <div style="display: flex; justify-content: space-around; align-items: center;">
+              <div class="left">Contents</div>
+              <div class=" menu-icon" onclick="hideSidebar()">&#10006;</div>
+            </div>
+            
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+          </div>
     </header>
 
     <main>
       <section class="firstsection">
         <div class="leftsection whitish">
-          Hi, I am <span class="white">Yash</span>
-          <div>and I am a passionate</div>
-          <span id="element" class="white"></span>
+          <div class="whitish">
+            Hi, I am <span class="white">Yash</span>
+            <div>and I am a passionate</div>
+            <span id="element" class="white"></span>
+          </div>
         </div>
         <div class="rightsection"></div>
       </section>
       <hr />
-      <section class="secondsection">
-        <span style="color: rgba(173, 163, 163, 0.658)"
-          >What I have done so far</span
-        >
-        <h1 style="font-size: 1.9rem">Past Experience</h1>
-
-        <div class="box">
-          <div class="vertical" style="margin-left: 70px">
-            <div class="logo">
-              <img class="image-top" src="cpluslogo.png" alt="" />
-            </div>
-            <div class="vertical-title">C++ Language</div>
-            <div class="vertical-desc">
-              In my initial university semester, I acquired a foundational
-              understanding of the C language through the 'Introduction to C
-              Language' course. Additionally, I developed substantial expertise
-              in C++, which I now prefer for problem-solving in data structure
-              and algorithms (DSA).
-            </div>
-          </div>
-          <div class="vertical">
-            <div class="logo">
-              <img class="image-top" src="htmllogo.jpg" alt="" />
-            </div>
-            <div class="vertical-title">HTML Developing</div>
-            <div class="vertical-desc">
-              Fueled by an interest in web development, I initiated my learning
-              journey with HTML through online resources. Acquired comprehensive
-              knowledge of various HTML tags and their functionalities, enabling
-              the creation of a fundamental website structure.
-            </div>
-          </div>
-          <div class="vertical">
-            <div class="logo">
-              <img class="image-top" src="csslogo.png" alt="" />
-            </div>
-            <div class="vertical-title">CSS Styling</div>
-            <div class="vertical-desc">
-              After acquiring proficiency in HTML, I furthered my skills in CSS
-              through online resources. Explored diverse creative styling
-              techniques and gained insights into website design. Additionally,
-              developed fully-functional websites and clones, showcasing
-              comprehensive frontend expertise in various projects.
-            </div>
-          </div>
-          <div class="vertical">
-            <div class="logo">
-              <img
-                class="image-top"
-                src="javascriptlogo1.png"
-                alt=""
-                style="border-radius: 0px; height: 18px; width: 23px"
-              />
-            </div>
-            <div class="vertical-title">Java script</div>
-            <div class="vertical-desc">
-              To advance my expertise in web development, I mastered the
-              fundamental functions of JavaScript. Applied JavaScript
-              proficiently, garnering valuable experience in designing fully
-              functional and interactive websites with meticulous attention to
-              both frontend and backend aspects.
-            </div>
-          </div>
-          <div class="vertical">
-            <div class="logo">
-              <img class="image-top" src="reactlogo.webp" alt="" />
-            </div>
-            <div class="vertical-title">React JS</div>
-            <div class="vertical-desc">
-              Recognizing React as a valuable tool for web development, I
-              actively pursued hands-on experience. Initiated learning through
-              online resources, completing couple of projects. Continuously
-              expanding my knowledge, exploring new facets of React daily.
-            </div>
-          </div>
+      <div class="secondsection">
+        <div style="margin-left: 10%">
+          <span style="color: rgba(173, 163, 163, 0.658)"
+            >What I have done so far</span
+          >
+          <h1 style="font-size: 1.9rem">Past Experience</h1>
         </div>
+
+        <div style="display: flex; justify-content: center;">
+          <div class="history" style="width: 95%">
+            <div class="logos">
+              <div class="logo">
+                <img class="image-top" src="cpluslogo.png" alt="" />
+              </div>
+              <div class="logo">
+                <img class="image-top" src="htmllogo.jpg" alt="" />
+              </div>
+              <div class="logo">
+                <img class="image-top" src="csslogo.png" alt="" />
+              </div>
+              <div class="logo">
+                <img
+                  class="image-top"
+                  src="javascriptlogo1.png"
+                  alt=""
+                  style="border-radius: 0px; height: 18px; width: 23px"
+                />
+              </div>
+              <div class="logo">
+                <img class="image-top" src="reactlogo.webp" alt="" />
+              </div>
+            </div>
+  
+            <div>
+              <hr class="inside-hr"/>
+            </div>
+            
+  
+            <div class="branch-box">
+              <div class="branch"></div>
+              <div class="branch"></div>
+              <div class="branch"></div>
+              <div class="branch"></div>
+              <div class="branch"></div>
+            </div>
+  
+            <div class="vertical">
+  
+              <div class="blocks">
+                <div class="vertical-title">C++ Language</div>
+                <div class="vertical-desc">
+                  In my initial university semester, I acquired a foundational
+                  understanding of the C language through the 'Introduction to C
+                  Language' course. Additionally, I developed substantial expertise
+                  in C++, which I now prefer for problem-solving in data structure
+                  and algorithms (DSA).
+                </div>
+              </div>
+              
+              <div class="blocks">
+                <div class="vertical-title">HTML Developing</div>
+                <div class="vertical-desc">
+                  Fueled by an interest in web development, I initiated my learning
+                  journey with HTML through online resources. Acquired comprehensive
+                  knowledge of various HTML tags and their functionalities, enabling
+                  the creation of a fundamental website structure.
+                </div>
+              </div>
+              
+              <div class="blocks">
+                <div class="vertical-title">CSS Styling</div>
+                <div class="vertical-desc">
+                  After acquiring proficiency in HTML, I furthered my skills in CSS
+                  through online resources. Explored diverse creative styling
+                  techniques and gained insights into website design. Additionally,
+                  developed fully-functional websites and clones, showcasing
+                  comprehensive frontend expertise in various projects.
+                </div>
+              </div>
+              
+              <div class="blocks">
+                <div class="vertical-title">Java script</div>
+                <div class="vertical-desc">
+                  To advance my expertise in web development, I mastered the
+                  fundamental functions of JavaScript. Applied JavaScript
+                  proficiently, garnering valuable experience in designing fully
+                  functional and interactive websites with meticulous attention to
+                  both frontend and backend aspects.
+                </div>
+              </div>
+    
+              <div class="blocks">
+                <div class="vertical-title">React JS</div>
+                <div class="vertical-desc">
+                  Recognizing React as a valuable tool for web development, I
+                  actively pursued hands-on experience. Initiated learning through
+                  online resources, completing couple of projects. Continuously
+                  expanding my knowledge, exploring new facets of React daily.
+                </div>
+              </div>
+              
+            </div>
+  
+          </div>
+  
+        
+        </div>
+        
+
         <div
           style="display: flex; justify-content: center; align-items: center"
         >
-          <button class="resume">Download My Resume</button>
+          <button class="resume" onclick="window.open('https://drive.google.com/file/d/1Q9hJpDC9YX-rH-wYw9J_KocWjvzdB2aM/view?usp=drive_link', '_blank')">Download My Resume</button>
         </div>
       </section>
 
@@ -319,6 +622,19 @@
         ],
         typeSpeed: 50,
       });
+
+      function displaySidebar() {
+        console.log("sidebar displayed");
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSidebar() {
+        console.log("sidebar displayed");
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+
+
     </script>
   </body>
 </html>
